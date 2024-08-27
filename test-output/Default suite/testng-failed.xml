@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mooncat_basic_test.Check_Header_and_Footer_Links">
+      <class name="mooncat_basic_test.Login">
         <methods>
-          <include name="CheckHeaderMenu"/>
           <include name="Setup"/>
-          <include name="CheckFooterMenu"/>
-          <include name="CheckLandingPageButtons"/>
           <include name="TearDown"/>
+          <include name="CreateNewAccount"/>
         </methods>
-      </class> <!-- mooncat_basic_test.Check_Header_and_Footer_Links -->
+      </class> <!-- mooncat_basic_test.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
