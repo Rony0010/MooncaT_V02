@@ -369,6 +369,227 @@ public class All_in_One {
 		
 	}
 
+	//============================Check Login Functionality===============
+
+	public void NavigateToLoginPage() {
+			
+		//Automate the mouse hover and click to the link
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]"))).build().perform();
+        driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]/div/div/a")).click();
+          
+			
+		}
+	
+	
+	public void ClickOnLoginButton() {
+		
+		
+		//NavigateToLoginPage();
+		//Click on the login button
+        driver.findElement(By.xpath("//*[@id=\"LoginButton\"]")).submit();
+          
+			
+		}
+	
+	public void ClickOnLogoutButton() {
+			
+			
+		 driver.findElement(By.xpath("//*[@id=\"customer_logout_link\"]")).click();
+	          
+				
+		}
+		
+	
+	@Test (priority = 5)
+	public void CreateNewAccount() throws InterruptedException {
+		
+		NavigateToLoginPage();
+		
+		//Clicked on Create Account Link      
+		driver.findElement(By.xpath("//*[@id=\"customer_login\"]/a")).click();
+		
+		//Input informations to create account
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-FirstName\"]")).sendKeys("Rana");
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-LastName\"]")).sendKeys("Khan");
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-email\"]")).sendKeys("rana@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-password\"]")).sendKeys("12345"); 
+      
+        driver.findElement(By.xpath("//*[@id=\"RegisterButton\"]")).submit();
+        
+    	System.out.println("\n \nNew Account has been created !!!\n\n");
+        Thread.sleep(3000); //wait for 3 seconds
+        
+        NavigateToLoginPage();
+        
+        //Input correct email and password
+        driver.findElement(By.xpath("//*[@id=\"CustomerEmail\"]")).sendKeys("rana@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"CustomerPassword\"]")).sendKeys("12345");
+        
+        ClickOnLoginButton();
+        
+        //Verify Test Case
+        String Expected_url = "https://www.mooncat.com/account";
+        String Actual_url = driver.getCurrentUrl(); 
+        //System.out.println(Actual_url);
+        
+        if(Expected_url.equals(Actual_url)) {
+        	
+        	System.out.println("\n \nCreate New Account Test Passed !!!\n\n");
+        	
+        }
+        else {
+        	
+        	System.out.println("\n \nCreate New Account Test Failure !!");
+        }
+        
+        Thread.sleep(3000); //wait for 3 seconds
+        
+        ClickOnLogoutButton();
+		
+		
+		}
+		
+
+	//============================Check AddToCart Functionality===============
+
+
+	@Test(priority = 6)
+	public void CheckAddToCartButton() throws InterruptedException {
+		
+		
+		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
+		 Thread.sleep(5000);
+		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button/span/text()")).click();
+		 Thread.sleep(5000);
+		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).clear();
+		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("3");
+		 driver.findElement(By.xpath("//*[@id=\"cart-icon-bubble\"]/svg")).click();
+		 
+		 Thread.sleep(10000);
+		 
+		 //Click on Cart icon
+		 driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
+		 
+		 
+		 
+		 String itemQuantity =  driver.findElement(By.xpath("//input[@class=\"quantity__input\"][@type=\"number\"]")).getAttribute("value");
+		 
+		 
+		 //Verify Test Case
+	        String itemQtn = "3";
+	        String ActualQtn = itemQuantity; 
+	        
+	        if(itemQtn.equals(ActualQtn)) {
+	        	
+	        	System.out.println("\n \n----------------------------------------\n");
+	        	System.out.println("Item Quantity Matching and Test Case have passed !! \n\n----------------------------------------\n");
+	        	
+	        }
+	        else {
+	        	
+	        	System.out.println("\n \n Not Matching !!");
+	        }		
+		 
+				
+		}
+		
+
+	
+	//============================Check WishlistPage Functionality===============
+	
+	
+	public void Login() {
+		
+		driver.findElement(By.xpath("//*[@id=\"CustomerEmail\"]")).sendKeys("exdevqa@kineticbrands.com");
+        driver.findElement(By.xpath("//*[@id=\"CustomerPassword\"]")).sendKeys("12345678");
+   
+		//Click on the login button
+        driver.findElement(By.xpath("//*[@id=\"LoginButton\"]")).submit();
+          
+			
+		}
+	
+	
+	
+
+	@Test(priority = 7)
+	public void CheckWishlistButton() {
+		
+
+		
+		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-1\"]/div")).click();
+		 
+		 //get the product name
+		 String productName =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/h1")).getText();
+		 
+		 System.out.println("Checking Product: "+ productName);
+		 
+		
+		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/span")).click();
+		 System.out.println("\nClicked on the product");
+		 
+		 //click on wishlist icon
+		 driver.findElement(By.xpath("//*[@id=\"wishlistLoginModal\"]/div/a")).click();
+		 
+		 Login();
+		 
+		 //re-click on wishlist icon after login
+		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/span")).click();
+		 System.out.println("2ndClicked");
+		 
+		 //Automate the mouse hover and click to the link
+	     Actions action = new Actions(driver);
+	     action.moveToElement(driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]"))).build().perform();
+	     driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]/div/div/a[2]")).click();
+	     
+	     System.out.println("# Navigate to wishlist page");
+	     
+	     driver.get("https://www.mooncat.com/pages/wishlist");
+	     
+	     //Check the product is added to the wishlist page or not
+	     String AddedProduct = driver.findElement(By.xpath("//*[@id=\"section-wishlist\"]/ul/li[3]/div/div/div[3]/div[1]/h3/a")).getText();
+			
+	     List<WebElement> list = driver.findElements(By.xpath("//div[@class = 'card__information']/h3[@class = 'card__heading h5 product-card__title']"));
+			
+			int totalLinks = list.size();
+			
+			System.out.println("\n---------------------------------------------\nTotal Number of Products : " + totalLinks +"\n---------------------------------------------\n\n");
+			
+			for(WebElement li : list) {
+				System.out.println("-->" + li.getText()+ "\n");
+			}
+			
+			
+		 
+
+			 //Verify Test Case
+		        String ExpectedProduct = "MERCURY IN RETROGRADE";
+		        String ActualProduct = AddedProduct ; 
+		        
+		        if(ExpectedProduct.equals(ActualProduct)) {
+		        	
+		        	System.out.println("\n \n--------------------------------------------------------------------\n");
+		        	System.out.println("Product added to the wishlist successfully and Test Case have passed !!! \n\n---------------------------------------------------------------------\n");
+		        	
+		        }
+		        else {
+		        	
+		        	System.out.println("\n \n Not Matching !!");
+		        }		
+			 
+			
+		 
+		 
+	}
+	
+	
+	
+	
+
+	
+
+	
 	
 
 	
