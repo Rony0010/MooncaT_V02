@@ -45,8 +45,21 @@ public class RewardPage {
 	
 	
 	@Test
-	public void Check_Reward_Functionality() {
+	public void Check_Reward_Functionality() throws InterruptedException {
 
+		//Click on Shop All Link
+		//driver.findElement(By.xpath("//*[@id=\"siteNav\"]/li[1]/a")).click();
+				
+		//added a paid item to the cart
+		driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button/span")).click();
+        
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[4]")).click();
+		Thread.sleep(2000);
+
+
+		
 		//Click on the Reward Link
 		driver.findElement(By.xpath("//*[@id=\"shopify-section-footer\"]/footer/div/div[2]/div[1]/div/div[1]/ul/li[2]/a")).click();
 		
@@ -56,22 +69,27 @@ public class RewardPage {
 		Login();
 		
 		
-		//Click on Shop All Link
-		driver.findElement(By.xpath("//*[@id=\"siteNav\"]/li[1]/a")).click();
-		
-		//added a paid item to the cart
-		driver.findElement(By.xpath("//*[@id=\"product-grid\"]/li[2]/div/div/product-form/form/button")).click();
-		
+		/*
 		//Click on the Reward Link
 		driver.findElement(By.xpath("//*[@id=\"shopify-section-footer\"]/footer/div/div[2]/div[1]/div/div[1]/ul/li[2]/a")).click();
-		
+		*/
 
 		//Click on the Redeem now and Add to cart button
-		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button")).click();
-		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div[2]/div[2]/div/button")).click();
-		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div/div[2]/button")).click();
+		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div/div[3]/button/span")).click();
+		System.out.println("Clicked on GetReward button");
+		
+
+		
+		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div/button/span")).click();
+		System.out.println("Clicked on YesAddToCart button");
+		
+
+		
+		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div/div/div[2]/button/span")).click();
+		System.out.println("Clicked on ViewCart button");
 		
 		
+		System.out.println("Test has been Passed");
 		
 		
 		

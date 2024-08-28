@@ -129,15 +129,15 @@
                   <a name="Check_Reward_Functionality">
                   </a> <!-- Check_Reward_Functionality -->
                   <span class="method-name">Check_Reward_Functionality</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;rewards-redeem&quot;]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button&quot;}
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;button&quot; href=&quot;/account/login?checkout_url=/pages/rewards&quot;&gt;...&lt;/a&gt; is not clickable at point (1191, 21). Other element would receive the click: &lt;ul class=&quot;header-icons&quot;&gt;...&lt;/ul&gt;
   (Session info: chrome=127.0.6533.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.4&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [725829dba320a1aa14cdd5f3965e3bfe, findElement {value=//*[@id=&quot;rewards-redeem&quot;]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/rv/1rk7txpd0gz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 725829dba320a1aa14cdd5f3965e3bfe
+Command: [f06786e886886711b6e8ca4847e06039, clickElement {id=f.8AF5685770248C85E209C99D64FF238A.d.EAE5E730D6FAF2493F48C38DAABA0B3F.e.290}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/rv/1rk7txpd0gz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54167/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (f06786e886886711b6e8ca4847e06039)] -&gt; xpath: //*[@id=&quot;shopify-section-template--16005566464160__rewards_page_header&quot;]/div/div[2]/div/a]
+Session ID: f06786e886886711b6e8ca4847e06039
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -148,11 +148,9 @@ Session ID: 725829dba320a1aa14cdd5f3965e3bfe
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at mooncat_basic_test.RewardPage.Check_Reward_Functionality(RewardPage.java:70)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at mooncat_basic_test.RewardPage.Check_Reward_Functionality(RewardPage.java:68)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -188,7 +186,7 @@ Session ID: 725829dba320a1aa14cdd5f3965e3bfe
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/rv/1rk7txpd0gz43px1dswxd7zm0000gn/T/testng-eclipse--484240633/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/rv/1rk7txpd0gz43px1dswxd7zm0000gn/T/testng-eclipse--1854904139/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -245,12 +243,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Check_Reward_Functionality')
 data.setCell(0, 2, 'mooncat_basic_test.RewardPage')
-data.setCell(0, 3, 139643);
+data.setCell(0, 3, 44029);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -285,11 +283,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Check_Reward_Functionality</span>
-                <span class="method-start">8455 ms</span>
+                <span class="method-start">33092 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">148104 ms</span>
+                <span class="method-start">77126 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

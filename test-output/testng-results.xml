@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-27T20:11:02 BDT" name="Default suite" finished-at="2024-08-27T20:13:34 BDT" duration-ms="151294">
+  <suite started-at="2024-08-28T12:02:37 BDT" name="Default suite" finished-at="2024-08-28T12:03:58 BDT" duration-ms="80320">
     <groups>
     </groups>
-    <test started-at="2024-08-27T20:11:02 BDT" name="Default test" finished-at="2024-08-27T20:13:34 BDT" duration-ms="151294">
+    <test started-at="2024-08-28T12:02:37 BDT" name="Default test" finished-at="2024-08-28T12:03:58 BDT" duration-ms="80320">
       <class name="mooncat_basic_test.RewardPage">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.RewardPage@4567f35d]" started-at="2024-08-27T20:11:02 BDT" name="Setup" finished-at="2024-08-27T20:11:11 BDT" duration-ms="8445" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.RewardPage@4567f35d]" started-at="2024-08-28T12:02:37 BDT" name="Setup" finished-at="2024-08-28T12:03:11 BDT" duration-ms="33085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Check_Reward_Functionality()[pri:0, instance:mooncat_basic_test.RewardPage@4567f35d]" started-at="2024-08-27T20:11:11 BDT" name="Check_Reward_Functionality" finished-at="2024-08-27T20:13:31 BDT" duration-ms="139643" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="Check_Reward_Functionality()[pri:0, instance:mooncat_basic_test.RewardPage@4567f35d]" started-at="2024-08-28T12:03:11 BDT" name="Check_Reward_Functionality" finished-at="2024-08-28T12:03:55 BDT" duration-ms="44029" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="rewards-redeem"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button"}
+              <![CDATA[element click intercepted: Element <a class="button" href="/account/login?checkout_url=/pages/rewards">...</a> is not clickable at point (1191, 21). Other element would receive the click: <ul class="header-icons">...</ul>
   (Session info: chrome=127.0.6533.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4', java.version: '22.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [725829dba320a1aa14cdd5f3965e3bfe, findElement {value=//*[@id="rewards-redeem"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/rv/1rk7txpd0gz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 725829dba320a1aa14cdd5f3965e3bfe]]>
+Command: [f06786e886886711b6e8ca4847e06039, clickElement {id=f.8AF5685770248C85E209C99D64FF238A.d.EAE5E730D6FAF2493F48C38DAABA0B3F.e.290}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/rv/1rk7txpd0gz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54167/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (f06786e886886711b6e8ca4847e06039)] -> xpath: //*[@id="shopify-section-template--16005566464160__rewards_page_header"]/div/div[2]/div/a]
+Session ID: f06786e886886711b6e8ca4847e06039]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="rewards-redeem"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button"}
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="button" href="/account/login?checkout_url=/pages/rewards">...</a> is not clickable at point (1191, 21). Other element would receive the click: <ul class="header-icons">...</ul>
   (Session info: chrome=127.0.6533.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4', java.version: '22.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [725829dba320a1aa14cdd5f3965e3bfe, findElement {value=//*[@id="rewards-redeem"]/div/div/div/div/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/rv/1rk7txpd0gz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 725829dba320a1aa14cdd5f3965e3bfe
+Command: [f06786e886886711b6e8ca4847e06039, clickElement {id=f.8AF5685770248C85E209C99D64FF238A.d.EAE5E730D6FAF2493F48C38DAABA0B3F.e.290}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/rv/1rk7txpd0gz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54167/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (f06786e886886711b6e8ca4847e06039)] -> xpath: //*[@id="shopify-section-template--16005566464160__rewards_page_header"]/div/div[2]/div/a]
+Session ID: f06786e886886711b6e8ca4847e06039
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -44,11 +44,9 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at mooncat_basic_test.RewardPage.Check_Reward_Functionality(RewardPage.java:70)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at mooncat_basic_test.RewardPage.Check_Reward_Functionality(RewardPage.java:68)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -77,11 +75,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Reward_Functionality -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.RewardPage@4567f35d]" started-at="2024-08-27T20:13:31 BDT" name="TearDown" finished-at="2024-08-27T20:13:34 BDT" duration-ms="3187" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.RewardPage@4567f35d]" started-at="2024-08-28T12:03:55 BDT" name="TearDown" finished-at="2024-08-28T12:03:58 BDT" duration-ms="3189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
