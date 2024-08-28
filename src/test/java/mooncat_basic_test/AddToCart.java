@@ -30,12 +30,14 @@ public class AddToCart {
 		
 		
 		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
+		 Thread.sleep(5000);
 		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button/span/text()")).click();
+		 Thread.sleep(5000);
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).clear();
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("3");
 		 driver.findElement(By.xpath("//*[@id=\"cart-icon-bubble\"]/svg")).click();
 		 
-		 Thread.sleep(2000);
+		 Thread.sleep(10000);
 		 
 		 //Click on Cart icon
 		 driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();

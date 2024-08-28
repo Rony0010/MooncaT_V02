@@ -54,10 +54,16 @@ public class RewardPage {
 		driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
 		
 		driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button/span")).click();
-        
-		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[4]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
+		
+		//Clicked on the cart icon
+		driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
+		Thread.sleep(5000);
 
+		// Refresh the page by reloading the current URL
+		driver.get(driver.getCurrentUrl());
+
+		Thread.sleep(5000);
 
 		
 		//Click on the Reward Link
@@ -67,7 +73,7 @@ public class RewardPage {
 		//Click on the Signin Button on Reward page
 		driver.findElement(By.xpath("//*[@id=\"shopify-section-template--16005566464160__rewards_page_header\"]/div/div[2]/div/a")).click();
 		Login();
-		
+		Thread.sleep(5000);
 		
 		/*
 		//Click on the Reward Link
@@ -76,23 +82,23 @@ public class RewardPage {
 
 		//Click on the Redeem now and Add to cart button
 		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div/div[3]/button/span")).click();
+		Thread.sleep(10000);
 		System.out.println("Clicked on GetReward button");
 		
 
-		
+		//Clicked on YesAddToCart button
 		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div/button/span")).click();
+		Thread.sleep(10000);
 		System.out.println("Clicked on YesAddToCart button");
 		
 
-		
+		//Clicked on ViewCart button		
 		driver.findElement(By.xpath("//*[@id=\"rewards-redeem\"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div/div/div[2]/button/span")).click();
+		Thread.sleep(10000);
 		System.out.println("Clicked on ViewCart button");
 		
 		
 		System.out.println("Test has been Passed");
-		
-		
-		
 		
 				
 	}
