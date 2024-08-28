@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mooncat_basic_test.AddToCart">
+      <class name="mooncat_basic_test.RewardPage">
         <methods>
           <include name="TearDown"/>
-          <include name="CheckAddToCartButton"/>
+          <include name="Check_Reward_Functionality"/>
           <include name="Setup"/>
         </methods>
-      </class> <!-- mooncat_basic_test.AddToCart -->
+      </class> <!-- mooncat_basic_test.RewardPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
