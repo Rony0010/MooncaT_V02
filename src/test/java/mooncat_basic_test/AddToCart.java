@@ -22,7 +22,7 @@ public class AddToCart {
         driver.manage().window().maximize();
         
         //Implicit wait to load all elements
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         
         //Navigate to the project website
         driver.get(baseURL);  
@@ -35,21 +35,21 @@ public class AddToCart {
 		
 		
 		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
-		 Thread.sleep(5000);
-		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button")).click();
-		 Thread.sleep(5000);
+		 //Thread.sleep(5000);
+		 
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).clear();
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("3");
 		 
+		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
+		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
+		 //Thread.sleep(3000);
+		 
 		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button")).click();
-		 Thread.sleep(5000);
+		 //Thread.sleep(5000);
 		 
 		 driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
 		 
-		 Thread.sleep(10000);
-		 
-		 //Click on Cart icon
-		 //driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
+		 //Thread.sleep(10000);
 		 
 		 
 		 
@@ -57,13 +57,13 @@ public class AddToCart {
 		 
 		 
 		 //Verify Test Case
-	        String itemQtn = "4";
+	        String itemQtn = "5";
 	        String ActualQtn = itemQuantity; 
 	        
 	        if(itemQtn.equals(ActualQtn)) {
 	        	
 	        	System.out.println("\n \n----------------------------------------\n");
-	        	System.out.println("Item Quantity Matching and Test Case have passed !! \n\n----------------------------------------\n");
+	        	System.out.println("Item quantity and AddToCart Buttons are working properly !! \n\n----------------------------------------\n");
 	        	
 	        }
 	        else {
