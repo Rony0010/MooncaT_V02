@@ -1,5 +1,7 @@
 package mooncat_basic_test;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +21,9 @@ public class AddToCart {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         
+        //Implicit wait to load all elements
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        
         //Navigate to the project website
         driver.get(baseURL);  
 		
@@ -31,16 +36,20 @@ public class AddToCart {
 		
 		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
 		 Thread.sleep(5000);
-		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button/span/text()")).click();
+		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button")).click();
 		 Thread.sleep(5000);
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).clear();
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("3");
-		 driver.findElement(By.xpath("//*[@id=\"cart-icon-bubble\"]/svg")).click();
+		 
+		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button")).click();
+		 Thread.sleep(5000);
+		 
+		 driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
 		 
 		 Thread.sleep(10000);
 		 
 		 //Click on Cart icon
-		 driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
+		 //driver.findElement(By.xpath("//*[@id=\"cart-notification-button\"]")).click();
 		 
 		 
 		 
@@ -48,7 +57,7 @@ public class AddToCart {
 		 
 		 
 		 //Verify Test Case
-	        String itemQtn = "3";
+	        String itemQtn = "4";
 	        String ActualQtn = itemQuantity; 
 	        
 	        if(itemQtn.equals(ActualQtn)) {
