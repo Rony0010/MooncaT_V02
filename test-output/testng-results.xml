@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T13:11:52 BDT" name="Default suite" finished-at="2024-09-04T13:12:30 BDT" duration-ms="37690">
+  <suite started-at="2024-09-04T13:33:50 BDT" name="Default suite" finished-at="2024-09-04T13:34:41 BDT" duration-ms="51231">
     <groups>
     </groups>
-    <test started-at="2024-09-04T13:11:52 BDT" name="Default test" finished-at="2024-09-04T13:12:30 BDT" duration-ms="37690">
+    <test started-at="2024-09-04T13:33:50 BDT" name="Default test" finished-at="2024-09-04T13:34:41 BDT" duration-ms="51231">
       <class name="mooncat_basic_test.Multifunctional">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.Multifunctional@1fa268de]" started-at="2024-09-04T13:11:52 BDT" name="Setup" finished-at="2024-09-04T13:12:19 BDT" duration-ms="26181" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.Multifunctional@a514af7]" started-at="2024-09-04T13:33:50 BDT" name="Setup" finished-at="2024-09-04T13:34:23 BDT" duration-ms="33085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Check_Search_Box_Functionality()[pri:5, instance:mooncat_basic_test.Multifunctional@1fa268de]" started-at="2024-09-04T13:12:19 BDT" name="Check_Search_Box_Functionality" finished-at="2024-09-04T13:12:20 BDT" duration-ms="1310" status="PASS">
+        <test-method signature="CreateNewAccount()[pri:6, instance:mooncat_basic_test.Multifunctional@a514af7]" started-at="2024-09-04T13:34:23 BDT" name="CreateNewAccount" finished-at="2024-09-04T13:34:31 BDT" duration-ms="7932" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Check_Search_Box_Functionality -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.Multifunctional@1fa268de]" started-at="2024-09-04T13:12:20 BDT" name="TearDown" finished-at="2024-09-04T13:12:30 BDT" duration-ms="10184" status="PASS">
+        </test-method> <!-- CreateNewAccount -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.Multifunctional@a514af7]" started-at="2024-09-04T13:34:31 BDT" name="TearDown" finished-at="2024-09-04T13:34:41 BDT" duration-ms="10200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

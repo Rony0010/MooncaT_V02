@@ -422,10 +422,95 @@ public class Multifunctional {
 	        	
 	        	System.out.println("\n \n Not Matching !!");
 	        }		
-		 
- 
 		
 	}
+	
+	
+	
+	//------------------Create New Account and Login Functionalities test-----------
+
+	
+	public void NavigateToLoginPage() {
+			
+		//Automate the mouse hover and click to the link
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]"))).build().perform();
+        driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]/div/div/a")).click();
+          
+			
+		}
+	
+	
+	public void ClickOnLoginButton() {
+		
+		
+		//NavigateToLoginPage();
+		//Click on the login button
+        driver.findElement(By.xpath("//*[@id=\"LoginButton\"]")).submit();
+          
+			
+		}
+	
+	/*public void ClickOnLogoutButton() {
+			
+			
+		 driver.findElement(By.xpath("//*[@id=\"customer_logout_link\"]")).click();
+	          
+				
+		}
+	*/	
+	
+	@Test (priority = 6)
+	public void CreateNewAccount() throws InterruptedException {
+		
+		NavigateToLoginPage();
+		
+		//Clicked on Create Account Link      
+		driver.findElement(By.xpath("//*[@id=\"customer_login\"]/a")).click();
+		
+		//Input informations to create account
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-FirstName\"]")).sendKeys("Kana");
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-LastName\"]")).sendKeys("Lan");
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-email\"]")).sendKeys("kana@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"RegisterForm-password\"]")).sendKeys("12345"); 
+      
+        driver.findElement(By.xpath("//*[@id=\"RegisterButton\"]")).submit();
+        
+    	System.out.println("\n \nNew Account has been created !!!\n\n");
+        //Thread.sleep(3000); //wait for 3 seconds
+        
+        NavigateToLoginPage();
+        
+        //Input correct email and password
+        driver.findElement(By.xpath("//*[@id=\"CustomerEmail\"]")).sendKeys("kana@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"CustomerPassword\"]")).sendKeys("12345");
+        
+        ClickOnLoginButton();
+        
+        //Verify Test Case
+        String Expected_url = "https://www.mooncat.com/account";
+        String Actual_url = driver.getCurrentUrl(); 
+        //System.out.println(Actual_url);
+        
+        if(Expected_url.equals(Actual_url)) {
+        	
+        	System.out.println("\n \n--------------------------------------------------------------------/n/nCreate New Account and Login functionalities are working properly !!!\n\n");
+        	
+        }
+        else {
+        	
+        	System.out.println("\n \nCreate New Account Test Failure !!");
+        }
+        
+        //Thread.sleep(3000); //wait for 3 seconds
+        
+        //ClickOnLogoutButton();
+		
+		
+		}
+		
+	
+	
 
 	
 	
