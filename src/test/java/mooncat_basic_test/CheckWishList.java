@@ -1,5 +1,6 @@
 package mooncat_basic_test;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -16,7 +17,6 @@ public class CheckWishList {
 	
 	public String baseURL = "https://www.mooncat.com/";
 	public WebDriver driver;
-	
 	@BeforeTest
 	public void Setup() {
 		
@@ -24,10 +24,26 @@ public class CheckWishList {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         
+        //Implicit wait to load all elements
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        
         //Navigate to the project website
         driver.get(baseURL);  
 		
 	}
+	
+
+	
+	public void NavigateToLoginPage() {
+			
+		//Automate the mouse hover and click to the link
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]"))).build().perform();
+        driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]/div/div/a")).click();
+          
+			
+		}
+	
 	
 	
 	
@@ -46,29 +62,25 @@ public class CheckWishList {
 	
 
 	@Test
-	public void CheckWishlistButton() {
+	public void CheckWishlistButton() throws InterruptedException {
 		
-
-		
-		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-1\"]/div")).click();
-		 
-		 //get the product name
-		 String productName =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/h1")).getText();
-		 
-		 System.out.println("Checking Product: "+ productName);
-		 
-		
-		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/span")).click();
-		 System.out.println("\nClicked on the product");
-		 
-		 //click on wishlist icon
-		 driver.findElement(By.xpath("//*[@id=\"wishlistLoginModal\"]/div/a")).click();
-		 
+		 NavigateToLoginPage();
 		 Login();
 		 
-		 //re-click on wishlist icon after login
+		 //Clicked on the Mooncat logo to navigate to the welcome page
+		 driver.findElement(By.xpath("//*[@id=\"site-header\"]/a/img")).click();
+		 
+		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
+		 //Thread.sleep(5000);
+		
+		 //get the product name
+		 String productName =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/h1")).getText();
+		 System.out.println("Checking Product: "+ productName);
+		 
+		 
+		//clicked on the wishlist-heart icon
 		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/span")).click();
-		 System.out.println("2ndClicked");
+		 
 		 
 		 //Automate the mouse hover and click to the link
 	     Actions action = new Actions(driver);
@@ -77,11 +89,11 @@ public class CheckWishList {
 	     
 	     System.out.println("# Navigate to wishlist page");
 	     
-	     driver.get("https://www.mooncat.com/pages/wishlist");
 	     
 	     //Check the product is added to the wishlist page or not
-	     String AddedProduct = driver.findElement(By.xpath("//*[@id=\"section-wishlist\"]/ul/li[3]/div/div/div[3]/div[1]/h3/a")).getText();
+	     //String AddedProduct = driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/h1")).getText();
 			
+	     	
 	     List<WebElement> list = driver.findElements(By.xpath("//div[@class = 'card__information']/h3[@class = 'card__heading h5 product-card__title']"));
 			
 			int totalLinks = list.size();
@@ -96,13 +108,13 @@ public class CheckWishList {
 		 
 
 			 //Verify Test Case
-		        String ExpectedProduct = "MERCURY IN RETROGRADE";
-		        String ActualProduct = AddedProduct ; 
+		        String ExpectedProduct = "LACQUER SET";
+		        String ActualProduct = productName; ; 
 		        
 		        if(ExpectedProduct.equals(ActualProduct)) {
 		        	
 		        	System.out.println("\n \n--------------------------------------------------------------------\n");
-		        	System.out.println("Product added to the wishlist successfully and Test Case have passed !!! \n\n---------------------------------------------------------------------\n");
+		        	System.out.println("Wishlist-icon is working Properly !!! \n\n---------------------------------------------------------------------\n");
 		        	
 		        }
 		        else {

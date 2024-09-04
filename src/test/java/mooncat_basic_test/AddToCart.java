@@ -38,10 +38,10 @@ public class AddToCart {
 		 //Thread.sleep(5000);
 		 
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).clear();
-		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("3");
+		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("1");
 		 
 		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
-		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
+		 //driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
 		 //Thread.sleep(3000);
 		 
 		 driver.findElement(By.xpath("//*[@id=\"product-form-template--15967085297824__main\"]/div/button")).click();
@@ -57,13 +57,13 @@ public class AddToCart {
 		 
 		 
 		 //Verify Test Case
-	        String itemQtn = "5";
+	        String itemQtn = "2";
 	        String ActualQtn = itemQuantity; 
 	        
 	        if(itemQtn.equals(ActualQtn)) {
 	        	
-	        	System.out.println("\n \n----------------------------------------\n");
-	        	System.out.println("Item quantity and AddToCart Buttons are working properly !! \n\n----------------------------------------\n");
+	        	System.out.println("\n \n------------------------------------------------------------------\n");
+	        	System.out.println("Item quantity and AddToCart Buttons are working properly !! \n\n------------------------------------------------------------------\n");
 	        	
 	        }
 	        else {

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-03T01:38:59 BDT" name="Default suite" finished-at="2024-09-03T01:40:14 BDT" duration-ms="75328">
+  <suite started-at="2024-09-04T13:11:52 BDT" name="Default suite" finished-at="2024-09-04T13:12:30 BDT" duration-ms="37690">
     <groups>
     </groups>
-    <test started-at="2024-09-03T01:38:59 BDT" name="Default test" finished-at="2024-09-03T01:40:14 BDT" duration-ms="75328">
-      <class name="mooncat_basic_test.AddToCart">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.AddToCart@2e005c4b]" started-at="2024-09-03T01:38:59 BDT" name="Setup" finished-at="2024-09-03T01:39:32 BDT" duration-ms="32684" status="PASS">
+    <test started-at="2024-09-04T13:11:52 BDT" name="Default test" finished-at="2024-09-04T13:12:30 BDT" duration-ms="37690">
+      <class name="mooncat_basic_test.Multifunctional">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.Multifunctional@1fa268de]" started-at="2024-09-04T13:11:52 BDT" name="Setup" finished-at="2024-09-04T13:12:19 BDT" duration-ms="26181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="CheckAddToCartButton()[pri:0, instance:mooncat_basic_test.AddToCart@2e005c4b]" started-at="2024-09-03T01:39:32 BDT" name="CheckAddToCartButton" finished-at="2024-09-03T01:40:04 BDT" duration-ms="32442" status="PASS">
+        <test-method signature="Check_Search_Box_Functionality()[pri:5, instance:mooncat_basic_test.Multifunctional@1fa268de]" started-at="2024-09-04T13:12:19 BDT" name="Check_Search_Box_Functionality" finished-at="2024-09-04T13:12:20 BDT" duration-ms="1310" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckAddToCartButton -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.AddToCart@2e005c4b]" started-at="2024-09-03T01:40:04 BDT" name="TearDown" finished-at="2024-09-03T01:40:14 BDT" duration-ms="10187" status="PASS">
+        </test-method> <!-- Check_Search_Box_Functionality -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.Multifunctional@1fa268de]" started-at="2024-09-04T13:12:20 BDT" name="TearDown" finished-at="2024-09-04T13:12:30 BDT" duration-ms="10184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- mooncat_basic_test.AddToCart -->
+      </class> <!-- mooncat_basic_test.Multifunctional -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
