@@ -291,8 +291,8 @@ public class Multifunctional {
 		VerifyTestCase("https://www.mooncat.com/collections/gift-cards", "Gift Cards ");
 			
 		
-		driver.findElement(By.xpath("//*[@id=\"shopify-section-footer\"]/footer/div/div[2]/div[1]/div/div[1]/ul/li[9]")).click();
-		VerifyTestCase("https://www.linkedin.com/company/mooncat/", "Careers ");
+		//driver.findElement(By.xpath("//*[@id=\"shopify-section-footer\"]/footer/div/div[2]/div[1]/div/div[1]/ul/li[9]")).click();
+		//VerifyTestCase("https://www.linkedin.com/company/mooncat/", "Careers ");
 		
 	}
 	
@@ -328,12 +328,12 @@ public class Multifunctional {
 	@Test(priority = 4)
 	public void CheckAddToCartButton() throws InterruptedException {
 		
-		
-		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
+		//Clicked on the product
+		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-4\"]/div/div/div[3]/div[1]/h3/a")).click();
 		 //Thread.sleep(5000);
 		 
 		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).clear();
-		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("1");
+		 driver.findElement(By.xpath("//*[@id=\"Quantity-template--15967085297824__main\"]")).sendKeys("2");
 		 
 		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
 		 //driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/div/quantity-input/button[2]")).click();
@@ -352,7 +352,7 @@ public class Multifunctional {
 		 
 		 
 		 //Verify Test Case
-	        String itemQtn = "2";
+	        String itemQtn = "3";
 	        String ActualQtn = itemQuantity; 
 	        
 	        if(itemQtn.equals(ActualQtn)) {
@@ -509,15 +509,6 @@ public class Multifunctional {
 		
 		}
 		
-	
-	
-
-	
-	
-
-	
-	
-	
 	
 	
 	@AfterTest

@@ -6,7 +6,7 @@
       <class name="mooncat_basic_test.Multifunctional">
         <methods>
           <include name="Setup"/>
-          <include name="CreateNewAccount"/>
+          <include name="CheckAddToCartButton"/>
           <include name="TearDown"/>
         </methods>
       </class> <!-- mooncat_basic_test.Multifunctional -->
