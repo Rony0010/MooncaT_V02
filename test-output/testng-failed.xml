@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mooncat_basic_test.Multifunctional">
+      <class name="mooncat_basic_test.Currency_Converter_test">
         <methods>
-          <include name="Setup"/>
-          <include name="CheckAddToCartButton"/>
           <include name="TearDown"/>
+          <include name="Setup"/>
+          <include name="Check_Currency_Converetr"/>
         </methods>
-      </class> <!-- mooncat_basic_test.Multifunctional -->
+      </class> <!-- mooncat_basic_test.Currency_Converter_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

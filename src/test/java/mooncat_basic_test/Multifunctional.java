@@ -325,7 +325,7 @@ public class Multifunctional {
 	
 	
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void CheckAddToCartButton() throws InterruptedException {
 		
 		//Clicked on the product
@@ -374,7 +374,7 @@ public class Multifunctional {
 	
 	
 	
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void Check_Search_Box_Functionality() {
 		
 		
@@ -387,10 +387,8 @@ public class Multifunctional {
 		driver.findElement(By.xpath("//*[@id=\"Search-In-Modal-1\"]")).sendKeys(Keys.ENTER);
 		
 	
-		System.out.println("Clicked on View all");
 		
-		
-		//Check the product is added to the wishlist page or not
+		//Check the product
 	    String AddedProduct = driver.findElement(By.xpath("//*[@id=\"product-grid\"]/li[1]/div/div/div[3]/div[1]/h3/a")).getText();
 		
 		
@@ -460,7 +458,7 @@ public class Multifunctional {
 		}
 	*/	
 	
-	@Test (priority = 6)
+	@Test (priority = 5)
 	public void CreateNewAccount() throws InterruptedException {
 		
 		NavigateToLoginPage();
@@ -494,7 +492,7 @@ public class Multifunctional {
         
         if(Expected_url.equals(Actual_url)) {
         	
-        	System.out.println("\n \n--------------------------------------------------------------------/n/nCreate New Account and Login functionalities are working properly !!!\n\n");
+        	System.out.println("\n \n--------------------------------------------------------------------\n\nCreate New Account and Login functionalities are working properly !!! \n\n---------------------------------------------------------------------\n\n\n\n");
         	
         }
         else {
@@ -509,6 +507,96 @@ public class Multifunctional {
 		
 		}
 		
+	
+	
+	//------------------------Wishlist Icon Test------------------------
+	
+	public void Login() {
+		
+		driver.findElement(By.xpath("//*[@id=\"CustomerEmail\"]")).sendKeys("exdevqa@kineticbrands.com");
+        driver.findElement(By.xpath("//*[@id=\"CustomerPassword\"]")).sendKeys("12345678");
+   
+		//Click on the login button
+        driver.findElement(By.xpath("//*[@id=\"LoginButton\"]")).submit();
+          
+			
+		}
+
+	@Test (priority = 6)
+	public void CheckWishlistButton() throws InterruptedException {
+		
+		 NavigateToLoginPage();
+		 Login();
+		 
+		 //Clicked on the Mooncat logo to navigate to the welcome page
+		 driver.findElement(By.xpath("//*[@id=\"site-header\"]/a/img")).click();
+		 
+		 driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-2\"]/div/div/div[3]/div[1]/h3/a")).click();
+		 //Thread.sleep(5000);
+		
+		 //get the product name
+		 String productName =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/h1")).getText();
+		 System.out.println("Checking Product: "+ productName);
+		 
+		 
+		//clicked on the wishlist-heart icon
+		 driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[2]/span")).click();
+		 
+		 
+		 //Automate the mouse hover and click to the link
+	     Actions action = new Actions(driver);
+	     action.moveToElement(driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]"))).build().perform();
+	     driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[2]/div/div/a[2]")).click();
+	     
+	     System.out.println("# Navigate to wishlist page");
+	     
+	     
+	     //Check the product is added to the wishlist page or not
+	     //String AddedProduct = driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/h1")).getText();
+			
+	     	
+	     List<WebElement> list = driver.findElements(By.xpath("//div[@class = 'card__information']/h3[@class = 'card__heading h5 product-card__title']"));
+			
+			int totalLinks = list.size();
+			
+			System.out.println("\n---------------------------------------------\nTotal Number of Products : " + totalLinks +"\n---------------------------------------------\n\n");
+			
+			for(WebElement li : list) {
+				System.out.println("-->" + li.getText()+ "\n");
+			}
+			
+			
+		 
+
+			 //Verify Test Case
+		        String ExpectedProduct = "LACQUER SET";
+		        String ActualProduct = productName; ; 
+		        
+		        if(ExpectedProduct.equals(ActualProduct)) {
+		        	
+		        	System.out.println("\n \n--------------------------------------------------------------------\n");
+		        	System.out.println("Wishlist-icon is working Properly !!! \n\n---------------------------------------------------------------------\n");
+		        	
+		        }
+		        else {
+		        	
+		        	System.out.println("\n \n Not Matching !!");
+		        }		
+			 
+		 
+	}
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+	
+	
 	
 	
 	@AfterTest
