@@ -1,21 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-18T12:06:06 BDT" name="Default suite" finished-at="2024-09-18T12:06:58 BDT" duration-ms="51420">
+  <suite started-at="2024-09-18T14:01:23 BDT" name="Default suite" finished-at="2024-09-18T14:06:56 BDT" duration-ms="333175">
     <groups>
     </groups>
-    <test started-at="2024-09-18T12:06:06 BDT" name="Default test" finished-at="2024-09-18T12:06:58 BDT" duration-ms="51420">
+    <test started-at="2024-09-18T14:01:23 BDT" name="Default test" finished-at="2024-09-18T14:06:56 BDT" duration-ms="333175">
       <class name="mooncat_basic_test.Currency_Converter_test">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.Currency_Converter_test@5ffead27]" started-at="2024-09-18T12:06:06 BDT" name="Setup" finished-at="2024-09-18T12:06:10 BDT" duration-ms="3448" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:01:23 BDT" name="Setup" finished-at="2024-09-18T14:01:25 BDT" duration-ms="2288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="USD_to_EUR_Converter()[pri:3, instance:mooncat_basic_test.Currency_Converter_test@5ffead27]" started-at="2024-09-18T12:06:10 BDT" name="USD_to_EUR_Converter" finished-at="2024-09-18T12:06:47 BDT" duration-ms="37740" status="PASS">
+        <test-method signature="USD_to_CAD_Converter()[pri:1, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:01:25 BDT" name="USD_to_CAD_Converter" finished-at="2024-09-18T14:02:39 BDT" duration-ms="73951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- USD_to_CAD_Converter -->
+        <test-method signature="USD_to_GBP_Converter()[pri:2, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:02:39 BDT" name="USD_to_GBP_Converter" finished-at="2024-09-18T14:03:56 BDT" duration-ms="76339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- USD_to_GBP_Converter -->
+        <test-method signature="USD_to_EUR_Converter()[pri:3, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:03:56 BDT" name="USD_to_EUR_Converter" finished-at="2024-09-18T14:04:14 BDT" duration-ms="18078" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- USD_to_EUR_Converter -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.Currency_Converter_test@5ffead27]" started-at="2024-09-18T12:06:47 BDT" name="TearDown" finished-at="2024-09-18T12:06:58 BDT" duration-ms="10202" status="PASS">
+        <test-method signature="CAD_to_USD_Converter()[pri:4, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:04:14 BDT" name="CAD_to_USD_Converter" finished-at="2024-09-18T14:04:31 BDT" duration-ms="16942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CAD_to_USD_Converter -->
+        <test-method signature="CAD_to_GBP_Converter()[pri:5, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:04:31 BDT" name="CAD_to_GBP_Converter" finished-at="2024-09-18T14:04:47 BDT" duration-ms="16359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CAD_to_GBP_Converter -->
+        <test-method signature="CAD_to_EUR_Converter()[pri:6, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:04:47 BDT" name="CAD_to_EUR_Converter" finished-at="2024-09-18T14:05:03 BDT" duration-ms="16311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CAD_to_EUR_Converter -->
+        <test-method signature="EUR_to_USD_Converter()[pri:7, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:05:03 BDT" name="EUR_to_USD_Converter" finished-at="2024-09-18T14:05:20 BDT" duration-ms="16644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EUR_to_USD_Converter -->
+        <test-method signature="EUR_to_CAD_Converter()[pri:8, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:05:20 BDT" name="EUR_to_CAD_Converter" finished-at="2024-09-18T14:05:37 BDT" duration-ms="16386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EUR_to_CAD_Converter -->
+        <test-method signature="EUR_to_GBP_Converter()[pri:9, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:05:37 BDT" name="EUR_to_GBP_Converter" finished-at="2024-09-18T14:05:54 BDT" duration-ms="17339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EUR_to_GBP_Converter -->
+        <test-method signature="GBP_to_USD_Converter()[pri:10, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:05:54 BDT" name="GBP_to_USD_Converter" finished-at="2024-09-18T14:06:12 BDT" duration-ms="18603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GBP_to_USD_Converter -->
+        <test-method signature="GBP_to_CAD_Converter()[pri:11, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:06:12 BDT" name="GBP_to_CAD_Converter" finished-at="2024-09-18T14:06:30 BDT" duration-ms="17193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GBP_to_CAD_Converter -->
+        <test-method signature="GBP_to_EUR_Converter()[pri:12, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:06:30 BDT" name="GBP_to_EUR_Converter" finished-at="2024-09-18T14:06:46 BDT" duration-ms="16441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GBP_to_EUR_Converter -->
+        <test-method signature="CurrencyConverterTestReport()[pri:13, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:06:46 BDT" name="CurrencyConverterTestReport" finished-at="2024-09-18T14:06:46 BDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CurrencyConverterTestReport -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:mooncat_basic_test.Currency_Converter_test@4466af20]" started-at="2024-09-18T14:06:46 BDT" name="TearDown" finished-at="2024-09-18T14:06:56 BDT" duration-ms="10248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
