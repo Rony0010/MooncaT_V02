@@ -6,7 +6,7 @@
       <class name="mooncat_basic_test.Currency_Converter_test">
         <methods>
           <include name="TearDown"/>
-          <include name="Check_Currency_Converter"/>
+          <include name="USD_to_CAD_Converter"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- mooncat_basic_test.Currency_Converter_test -->

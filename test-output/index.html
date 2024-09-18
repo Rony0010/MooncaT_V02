@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="mooncat_basic_test.Currency_Converter_test" class="method navigator-link" hash-for-method="Check_Currency_Converter">Check_Currency_Converter</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="mooncat_basic_test.Currency_Converter_test" class="method navigator-link" hash-for-method="USD_to_CAD_Converter">USD_to_CAD_Converter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="mooncat_basic_test.Currency_Converter_test" class="method navigator-link" hash-for-method="USD_to_GBP_Converter">USD_to_GBP_Converter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +131,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Check_Currency_Converter">
-                  </a> <!-- Check_Currency_Converter -->
-                  <span class="method-name">Check_Currency_Converter</span>
+                  <a name="USD_to_CAD_Converter">
+                  </a> <!-- USD_to_CAD_Converter -->
+                  <span class="method-name">USD_to_CAD_Converter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="USD_to_GBP_Converter">
+                  </a> <!-- USD_to_GBP_Converter -->
+                  <span class="method-name">USD_to_GBP_Converter</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/rv/1rk7txpd0gz43px1dswxd7zm0000gn/T/testng-eclipse-1316738492/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/rv/1rk7txpd0gz43px1dswxd7zm0000gn/T/testng-eclipse--409157686/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +157,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;mooncat_basic_test.Currency_Converter_test&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;Check_Currency_Converter&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- mooncat_basic_test.Currency_Converter_test --&gt;
+      &lt;class name=&quot;mooncat_basic_test.Currency_Converter_test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Check_Currency_Converter')
+data.setCell(0, 1, 'USD_to_GBP_Converter')
 data.setCell(0, 2, 'mooncat_basic_test.Currency_Converter_test')
-data.setCell(0, 3, 44640);
+data.setCell(0, 3, 86708);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'USD_to_CAD_Converter')
+data.setCell(1, 2, 'mooncat_basic_test.Currency_Converter_test')
+data.setCell(1, 3, 61448);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -230,12 +242,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">Check_Currency_Converter</span>
-                <span class="method-start">118756 ms</span>
+                <span class="method-name">USD_to_CAD_Converter</span>
+                <span class="method-start">33041 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">USD_to_GBP_Converter</span>
+                <span class="method-start">94491 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">163400 ms</span>
+                <span class="method-start">181201 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

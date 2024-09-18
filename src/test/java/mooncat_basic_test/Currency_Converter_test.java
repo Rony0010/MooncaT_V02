@@ -1,5 +1,7 @@
 package mooncat_basic_test;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,72 +28,97 @@ public class Currency_Converter_test {
 		
 	}
 	
-	/*public void clickOnCurrencyMenu() {
-		
-		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]")).click();
-		
-	}*/
 	
-	public void changeToUSD() {
 	
-		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]")).click();
-		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[1]")).click();
-		
-		System.out.println("changeToUSD");
-	
-	}
-	
-	public void verifyCurrencyConverter(String testFromCurrencyName, String testToCurrencyName, String changeCurrencyPath, String displayPricePath) {
-
-		//click on Currency Menu
-		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]")).click();
-
-		//change the currency
-		String changeCurrency = changeCurrencyPath; 
-		driver.findElement(By.xpath(changeCurrencyPath)).click();
-		
-		//get the full price with currency notation
-		WebElement displayPriceWithSymbool = driver.findElement(By.xpath(displayPricePath));
-
-		
-		//get the text of the element
-		String PriceWithSymbool = displayPriceWithSymbool.getText();
-		
-		//the word to search for
-		String expectedText = testToCurrencyName;
-		
-		// Check if the currency converter working for USD to CAD
-        if (PriceWithSymbool.contains(expectedText)) {
-            System.out.println(testFromCurrencyName + " to " + testToCurrencyName +  " working properly !! \n");
-        } else {
-            System.out.println(testFromCurrencyName + " to " + testToCurrencyName +  " not working properly !! \n");
-        }
-		
-	}
-	
-	@Test
-	public void Check_Currency_Converter() throws InterruptedException {
+	@Test(priority = 1)
+	public void USD_to_CAD_Converter() throws InterruptedException {
 		
 		
 		//click on the Product
 		driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-1\"]/div/div/div[3]/div[1]/h3/a")).click();
-		
-		//clickOnCurrencyMenu();
-		
-		verifyCurrencyConverter("$USD", "$CAD", "//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[2]", "//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/div[2]/div/div[1]/span[2]/span");
-		
 		//Thread.sleep(3000);
 		
-		changeToUSD();
-		verifyCurrencyConverter("$USD", "£GBP", "//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[3]", "//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/div[2]/div/div[1]/span[2]/span");
+		//get the USD Price
+		String usdPrice =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/div[2]/div/div[1]/span[2]/span")).getText();
+		Thread.sleep(2000);
 		
 		
-		changeToUSD();
-		verifyCurrencyConverter("$USD", "€EUR", "//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[4]", "//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/div[2]/div/div[1]/span[2]/span");
+		//click on currency menu
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]/span")).click();
 		
+		Thread.sleep(5000);
 		
+		//change the currency to CAD
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[2]")).click();
+		
+		//get the price with currency notation
+		String cadPrice =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/div[2]/div/div[1]/span[2]")).getText();
+		System.out.println("\nProduct price in $USD : " +usdPrice);
+		System.out.println("\n\nProduct price in $CAD : " +cadPrice);
+		
+		//the word to search for
+		String expectedText = "CAD";
+		
+		// Check if the currency converter working
+        if (cadPrice.contains(expectedText)) {
+            System.out.println("\n >> $USD to $CAD is working properly !! \n");
+        } else {
+            System.out.println("\n $USD to $CAD is not working properly !! \n");
+        }		
 		
 	}
+	
+	
+
+	
+	@Test(priority = 2)
+	public void USD_to_GBP_Converter() throws InterruptedException {
+		
+		//click on the mooncat logo
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/a")).click();
+		Thread.sleep(2000);
+		
+		//click on the Product
+		driver.findElement(By.xpath("//*[@id=\"Slide-template--15967084642464__featured_collection-1\"]/div/div/div[3]/div[1]/h3/a")).click();
+		//Thread.sleep(3000);
+		
+		
+		//click on currency menu
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]")).click();
+		Thread.sleep(5000);
+		
+
+		//change the currency to USD
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[1]")).click();
+		Thread.sleep(3000);
+		
+		//click on currency menu
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]")).click();
+		Thread.sleep(2000);
+				
+		
+		//change the currency to GBP
+		driver.findElement(By.xpath("//*[@id=\"site-header\"]/ul[2]/li[3]/div/ul/li[3]")).click();
+		Thread.sleep(2000);
+		
+		//get the price with currency notation
+		String gbpPrice =  driver.findElement(By.xpath("//*[@id=\"ProductInfo-template--15967085297824__main\"]/div[1]/div[2]/div/div[1]/span[2]")).getText();
+		//System.out.println("\nProduct price in USD : " +usdPrice);
+		System.out.println("\nProduct price in £GBP  : " +gbpPrice);
+		
+		//the word to search for
+		String expectedText = "GBP";
+		
+		// Check if the currency converter working
+        if (gbpPrice.contains(expectedText)) {
+            System.out.println("\n >> $USD to £GBP is working properly !! \n");
+        } else {
+            System.out.println("\n $USD to £GBP is not working properly !! \n");
+        }		
+		
+	}
+	
+	
 	
 	@AfterTest
 	public void TearDown() throws InterruptedException {
